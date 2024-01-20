@@ -18,14 +18,11 @@
  */ 
 package io.github.realyusufismail.temporalsmith.datagen.spirit
 
-import com.google.common.collect.ImmutableMap
 import io.github.realyusufismail.temporalsmith.TemporalSmith
 import io.github.realyusufismail.temporalsmith.TemporalSmith.TemporalSmith.MOD_ID
 import java.util.*
-import net.minecraft.client.renderer.texture.atlas.sources.PalettedPermutations
 import net.minecraft.client.renderer.texture.atlas.sources.SingleFile
 import net.minecraft.data.PackOutput
-import net.minecraft.resources.ResourceLocation
 import net.minecraftforge.common.data.ExistingFileHelper
 import net.minecraftforge.common.data.SpriteSourceProvider
 
