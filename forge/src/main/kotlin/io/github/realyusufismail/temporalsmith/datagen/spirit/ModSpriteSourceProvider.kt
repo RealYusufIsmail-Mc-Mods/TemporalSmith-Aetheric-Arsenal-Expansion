@@ -34,8 +34,6 @@ class ModSpriteSourceProvider(output: PackOutput, exFileHelper: ExistingFileHelp
     SpriteSourceProvider(output, exFileHelper, MOD_ID) {
     override fun addSources() {
         val blockAtlas = atlas(BLOCKS_ATLAS)
-        val armorTrimsAtlas = atlas(ResourceLocation("armor_trims"))
-
         blockAtlas.addSource(
             SingleFile(TemporalSmith.getModIdAndName("entity/shield/ruby"), Optional.empty()))
 
@@ -50,27 +48,5 @@ class ModSpriteSourceProvider(output: PackOutput, exFileHelper: ExistingFileHelp
 
         blockAtlas.addSource(
             SingleFile(TemporalSmith.getModIdAndName("entity/shield/graphite"), Optional.empty()))
-
-        //  Add the armor trims to ruby armor
-        armorTrimsAtlas.addSource(
-            PalettedPermutations(
-                listOf(
-                    TemporalSmith.getModIdAndName("trims/items/ruby_head_trim"),
-                    TemporalSmith.getModIdAndName("trims/items/ruby_chest_trim"),
-                    TemporalSmith.getModIdAndName("trims/items/ruby_legs_trim"),
-                    TemporalSmith.getModIdAndName("trims/items/ruby_feet_trim")),
-                ResourceLocation("trims/color_palettes/trim_palette"),
-                ImmutableMap.builder<String, ResourceLocation>()
-                    .put("ruby_emerald", ResourceLocation("trims/color_palettes/emerald"))
-                    .put("ruby_lapis", ResourceLocation("trims/color_palettes/lapis"))
-                    .put("ruby_diamond", ResourceLocation("trims/color_palettes/diamond"))
-                    .put("ruby_gold", ResourceLocation("trims/color_palettes/gold"))
-                    .put("ruby_iron", ResourceLocation("trims/color_palettes/iron"))
-                    .put("ruby_redstone", ResourceLocation("trims/color_palettes/redstone"))
-                    .put("ruby_coal", ResourceLocation("trims/color_palettes/coal"))
-                    .put("ruby_copper", ResourceLocation("trims/color_palettes/copper"))
-                    .put("ruby_quartz", ResourceLocation("trims/color_palettes/quartz"))
-                    .put("ruby_amethyst", ResourceLocation("trims/color_palettes/amethyst"))
-                    .build()))
     }
 }
