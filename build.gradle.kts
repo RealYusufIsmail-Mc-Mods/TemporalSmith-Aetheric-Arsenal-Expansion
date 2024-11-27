@@ -4,7 +4,7 @@ plugins {
     kotlin("jvm") version "1.9.22"
     kotlin("plugin.allopen") version "1.9.22"
     id("com.diffplug.spotless") version "6.22.0"
-    id("net.darkhax.curseforgegradle") version "1.1.17"
+    id("net.darkhax.curseforgegradle") version "1.1.18"
     jacoco // code coverage reports
 }
 
